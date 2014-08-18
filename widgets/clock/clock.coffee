@@ -8,9 +8,7 @@ class Dashing.Clock extends Dashing.Widget
 
     h = today.getHours()
     m = today.getMinutes()
-    s = today.getSeconds()
     m = @formatTime(m)
-    s = @formatTime(s)
 
     dd = " AM"
 
@@ -20,7 +18,7 @@ class Dashing.Clock extends Dashing.Widget
     if h > 12
       h = h - 12
 
-    @set('time', h + ":" + m + ":" + s + dd)
+    @set('time', h + ":" + m + dd)
     @set('date', today.toDateString())
     @set('closing', @closingTime(today))
 
