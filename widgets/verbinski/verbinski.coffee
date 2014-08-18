@@ -18,9 +18,6 @@ class Dashing.Verbinski extends Dashing.Widget
     @unpackWeek(@get('upcoming_week'))
     @getTime()
 
-    # flash the html node of this widget each time data comes in
-    $(@node).fadeOut().fadeIn()
-
   currentBg: (temp) ->
     @set 'right_now', @getBackground(temp)
 
