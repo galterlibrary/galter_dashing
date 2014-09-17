@@ -1,7 +1,9 @@
+Dir.glob(File.dirname(__FILE__) + '/local_env.rb', &method(:require))
+
 require 'dashing'
 
 configure do
-  set :auth_token, 'YOUR_AUTH_TOKEN'
+  set :auth_token, ENV['AUTH_TOKEN']
 
   helpers do
     def protected!
