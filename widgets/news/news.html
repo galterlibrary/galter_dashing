@@ -1,8 +1,9 @@
 <div class="heading" data-bind="title"></div>
 <hr />
-<div class="headline-container">
-  <h1 class="title" data-bind="current_headline.title | raw"></h1>
-  <div class="headline description">
-    <span data-bind="current_headline.description | raw"></span>
+<div style="display: table; height: 200px; overflow: hidden;">
+  <div class="headline-container" style="display: table-cell; vertical-align: middle;">
+    <h1 class="title" data-bind="current_headline.title | raw"></h1>
+    <div class="headline description"
+      data-bind="current_headline.description | raw"></div>
   </div>
 </div>
