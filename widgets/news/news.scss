@@ -17,20 +17,33 @@ $moreinfo-color:    rgba(255, 255, 255, 0.8);;
 
   .headline-container {
     display: none;
+    text-align: left;
+
+    h1 {
+      text-align: left;
+      padding-left: 20px;
+      line-height: 1em;
+    }
   }
 
   .description {
     font-size: 1em;
     color: $moreinfo-color;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: left;
   }
 
   .heading{
     color: #aaa;
-    font-size: 2em;
+    font-size: 1em;
+    text-align: left;
+    padding-left: 1em;
   }
 
   hr {
-    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
     margin-bottom: 1em;
   }
 }
