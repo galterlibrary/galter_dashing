@@ -9,7 +9,8 @@ SCHEDULER.every '30m', :first_in => 0 do
   classes = []
 
   classes_json.each do |c|
-    course_date = Time.parse(c['class_date']).strftime('%A, %B %e, %Y %l:%M %p')
+    course_date = Time.parse(c['class_date']).localtime("-05:00").
+      strftime('%A, %B %e, %Y %l:%M %p')
     classes << { 'label' => c['course']['title'], 'value' => course_date }
   end
 
