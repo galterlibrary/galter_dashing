@@ -17,20 +17,44 @@ $moreinfo-color:    rgba(255, 255, 255, 0.8);;
 
   .headline-container {
     display: none;
+    text-align: left;
+
+    h1 {
+      height: 1em;
+      line-height: 1em;
+      text-align: left;
+      padding-left: 20px;
+    }
   }
 
   .description {
     font-size: 1em;
     color: $moreinfo-color;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 1060px;
+    height: 150px;
+    line-height: 150px;
+    text-align: left;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+      overflow: hidden;
+    }
   }
 
   .heading{
     color: #aaa;
-    font-size: 2em;
+    font-size: 1em;
+    text-align: left;
+    padding-left: 1em;
   }
 
   hr {
-    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
     margin-bottom: 1em;
   }
 }
