@@ -11,7 +11,7 @@ $light-color: rgba(255, 255, 255, 0.7);
 // ----------------------------------------------------------------------------
 .widget-title {
 
-    color: $light-color;
+    color: rgba(0, 0, 0, 0.3);
     font-size: 15px;
     text-align: left;
     position: absolute;
@@ -22,6 +22,7 @@ $light-color: rgba(255, 255, 255, 0.7);
 
   background-color: $background-color;
   padding-top: 15px !important;
+  padding-left: 20px !important;
 
   h1 {
     margin-bottom: 0px;
