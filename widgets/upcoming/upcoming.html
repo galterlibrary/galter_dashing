@@ -1,0 +1,12 @@
+<h1 class='title' data-bind='title'></h1>
+<hr />
+
+<ul class='list-nostyle' data-foreach-item='items'>
+  <li class='class_title' data-bind='item.class'></li>
+  <i class='icon-calendar pull-left'></i>
+  <li class='detail ' data-bind='item.date'></li>
+  <i class='icon-time pull-left'></i>
+  <li class='detail' data-bind='item.time'></li>
+</ul>
+
+<p class='updated-at' data-bind='updatedAtMessage'></p>

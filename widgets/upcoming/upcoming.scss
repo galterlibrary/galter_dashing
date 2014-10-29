@@ -1,0 +1,50 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #61468b;
+$value-color:       #fff;
+
+$title-color:       #fff;
+$light-color: rgba(255, 255, 255, 0.7);
+$full-color:  rgba(255, 255, 255, 1);
+
+// ----------------------------------------------------------------------------
+// Widget-upcoming styles
+// ----------------------------------------------------------------------------
+
+.widget-upcoming {
+  background-color: $background-color;
+  vertical-align: top;
+  color: #fff;
+
+  .title {
+    color: $title-color;
+  }
+
+  .class_title{
+    color: $light-color;
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 10px;
+    line-height: 1em;
+  }
+
+  .detail {
+    color: $full-color;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1em;
+    padding-bottom: 10px;
+    margin-left: 30px;
+  }
+
+  ul {
+    clear: both;
+    margin: 0 15px;
+    margin-bottom: 1em;
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
