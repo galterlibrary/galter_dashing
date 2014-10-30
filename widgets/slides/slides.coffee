@@ -22,4 +22,4 @@ class Dashing.Slides extends Dashing.Widget
         @set 'image', slides[@current_index]
         @slide_container.fadeIn()
     else
-      @set 'image', '/content/welcome.jpg'
+      @set 'image', '/assets/content/welcome_mat.jpg'
