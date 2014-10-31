@@ -17,7 +17,7 @@ class Dashing.Slides extends Dashing.Widget
   next_slide: =>
     slides = @get('image_list')
     stale = @get('stale')
-    now = Date.now()/1000
+    now = Date.now() / 1000
 
     if now > stale
       window.location.reload(true)
