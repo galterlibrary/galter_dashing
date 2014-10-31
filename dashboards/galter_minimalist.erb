@@ -1,0 +1,32 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+
+  Dashing.widget_margins = [2, 2]
+  Dashing.widget_base_dimensions = [380, 354]
+  Dashing.numColumns = 5
+});
+</script>
+
+<% content_for :title do %>Galter Dashboard<% end %>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Image" data-image="/logo.png"></div>
+    </li>
+
+    <li data-row='1' data-col='2' data-sizex='4' data-sizey='3'>
+      <div data-id='welcome' data-view='Slides' data-interval='60'
+        data-image='/content/welcome.jpg'></div>
+    </li>
+
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id='hours' data-view="Clock" style='background-color: #b098d9;'></div>
+    </li>
+
+    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="forecast" data-view="Forecastmini" data-widget_title="Powered by Forecast.io"></div>
+    </li>
+  </ul>
+</div>

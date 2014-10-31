@@ -16,10 +16,16 @@ class Dashing.Slides extends Dashing.Widget
 
   next_slide: =>
     slides = @get('image_list')
+    stale = @get('stale')
+    now = Date.now() / 1000
+
+    if now > stale
+      window.location.reload(true)
+
     if slides
       @slide_container.fadeOut =>
         @current_index = (@current_index + 1) % slides.length
         @set 'image', slides[@current_index]
         @slide_container.fadeIn()
     else
-      @set 'image', '/content/welcome.jpg'
+      @set 'image', '/assets/content/welcome_mat.jpg'

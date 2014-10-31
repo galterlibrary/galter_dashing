@@ -1,6 +1,7 @@
 require 'net/http'
 require 'time'
 require 'json'
+require 'active_support/all'
 
 SCHEDULER.every '30m', :first_in => 0 do
   classes_uri = URI(ENV['COURSE_URI'])
@@ -9,9 +10,11 @@ SCHEDULER.every '30m', :first_in => 0 do
   classes = []
 
   classes_json.each do |c|
-    course_date = Time.parse(c['class_date']).localtime("-05:00").
-      strftime('%A, %B %e, %Y %l:%M %p')
-    classes << { 'label' => c['course']['title'], 'value' => course_date }
+    Time.zone = 'Central Time (US & Canada)'
+    course_date = Time.zone.parse(c['class_date']).strftime('%A, %m/%d/%Y')
+    course_time = Time.zone.parse(c['class_date']).strftime('%l:%M %p')
+    classes << { 'class' => c['course']['title'], 'date' => course_date,
+      'time' => course_time }
   end
 
   if classes.count == 0

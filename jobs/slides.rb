@@ -2,6 +2,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 require 'nokogiri'
+require 'time'
 
 class Slides
   @@uri ||= URI.parse(ENV['DASHBOARD_SLIDES'])
@@ -25,5 +26,6 @@ end
 slideshow = Slides.new
 
 SCHEDULER.every '15m', :first_in => 0 do
-  send_event('welcome', { image_list: slideshow.image_list })
+  stale = Time.now + 45 * 60
+  send_event('welcome', { image_list: slideshow.image_list, stale: stale.to_i })
 end

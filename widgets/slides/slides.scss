@@ -9,4 +9,9 @@ $background-color:  #fff;
 .widget-slides {
   background-color: $background-color;
   padding: 0 0 !important;
+
+  img {
+    width:200%;
+    height:100%;
+  }
 }
