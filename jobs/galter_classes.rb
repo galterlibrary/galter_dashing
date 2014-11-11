@@ -22,5 +22,5 @@ SCHEDULER.every '30m', :first_in => 0 do
       'value' => '' }
   end
 
-  send_event('galter-classes', { items: classes })
+  send_event('galter-classes', { items: classes[0..3] })
 end
