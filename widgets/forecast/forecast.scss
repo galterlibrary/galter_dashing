@@ -8,6 +8,7 @@ $moreinfo-color: rgb(169,171,172);
 // ----------------------------------------------------------------------------
 // Widget-forecast styles
 // ----------------------------------------------------------------------------
+
 .widget-title {
 
     color: rgba(0, 0, 0, 0.3);
@@ -37,14 +38,13 @@ $moreinfo-color: rgb(169,171,172);
   .title {
     color: $light-color;
     text-align: left;
-    font-size: 25px;
     margin-bottom: 10px;
   }
 
   .temp {
     color: $full-color;
     text-align: left;
-    font-size: 75px;
+    font-size: 76px;
   }
 
   .now_wrapper {
@@ -55,7 +55,6 @@ $moreinfo-color: rgb(169,171,172);
     color: $full-color;
     text-align: left;
     vertical-align: middle;
-    font-size: 20px;
   }
 
   .forecast-icon {

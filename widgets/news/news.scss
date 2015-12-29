@@ -27,7 +27,6 @@ $moreinfo-color: rgb(169,171,172);
   }
 
   .description {
-    font-size: 1em;
     color: $value-color;
     padding-left: 1em;
     padding-right: 1em;
@@ -37,6 +36,7 @@ $moreinfo-color: rgb(169,171,172);
   .heading{
     color: $title-color;
     font-size: 1em;
+    text-transform: none;
     text-align: left;
     padding-left: 1em;
   }
