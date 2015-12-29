@@ -1,0 +1,48 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #ec663c;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+
+// ----------------------------------------------------------------------------
+// Widget-text styles
+// ----------------------------------------------------------------------------
+.widget-text {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+  }
+
+  .more-info {
+    color: $moreinfo-color;
+  }
+
+  .updated-at {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+
+  &.large h3 {
+    font-size: 65px;
+  }
+}
+
+.galter-logo {
+    background-image: url("/assets/Feinberg-stacked-RGB.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-color: #fff;
+    color: rgb(81,70,137);
+    border-width: 20px 5px;
+    border-color: #fff;
+    border-style: solid;
+}
+
+.widget-logo h1.title {
+    color: rgb(81,70,137);
+    font-weight: 600;
+}
