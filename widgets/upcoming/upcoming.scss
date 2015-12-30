@@ -11,7 +11,7 @@ $moreinfo-color: rgb(169,171,172);
 // Widget-upcoming styles
 // ----------------------------------------------------------------------------
 
-.widget-upcoming {
+.widget.widget-upcoming {
   background-color: $background-color;
   vertical-align: top;
   color: #fff;
@@ -31,7 +31,6 @@ $moreinfo-color: rgb(169,171,172);
 
   .detail {
     color: $full-color;
-    font-size: 22px; 
     text-align: left;
     line-height: 1em;
     padding-bottom: 10px;
