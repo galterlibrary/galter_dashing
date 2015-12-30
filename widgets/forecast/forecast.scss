@@ -1,14 +1,14 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #61468b;
-
+$background-color:  rgb(81,70,137);
+$light-color:       rgb(184,183,218);
 $full-color:  rgba(255, 255, 255, 1);
-$light-color: rgba(255, 255, 255, 0.7);
-
+$moreinfo-color: rgb(169,171,172); 
 // ----------------------------------------------------------------------------
 // Widget-forecast styles
 // ----------------------------------------------------------------------------
+
 .widget-title {
 
     color: rgba(0, 0, 0, 0.3);
@@ -29,7 +29,7 @@ $light-color: rgba(255, 255, 255, 0.7);
   }
 
   .updated-at {
-    color: rgba(0, 0, 0, 0.3);
+    color: $moreinfo-color;
     bottom: 5px;
     right: 10px;
     left: auto;
@@ -38,14 +38,13 @@ $light-color: rgba(255, 255, 255, 0.7);
   .title {
     color: $light-color;
     text-align: left;
-    font-size: 25px;
     margin-bottom: 10px;
   }
 
   .temp {
     color: $full-color;
     text-align: left;
-    font-size: 75px;
+    font-size: 76px;
   }
 
   .now_wrapper {
@@ -56,7 +55,6 @@ $light-color: rgba(255, 255, 255, 0.7);
     color: $full-color;
     text-align: left;
     vertical-align: middle;
-    font-size: 20px;
   }
 
   .forecast-icon {
@@ -70,6 +68,10 @@ $light-color: rgba(255, 255, 255, 0.7);
   }
 
   .more-info {
-      color: $light-color;
+      color: $moreinfo-color;
+  }
+  
+  .widget-title {
+      color: $moreinfo-color;
   }
 }

@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'htmlentities'
 
 news_feeds = {
-  "fsm-main" => "http://www.feinberg.northwestern.edu/xml/rss.xml"
+  "fsm-main" => "http://news.feinberg.northwestern.edu/feed/"
 }
 
 Decoder = HTMLEntities.new

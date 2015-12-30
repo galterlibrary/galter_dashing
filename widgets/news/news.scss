@@ -1,12 +1,11 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #b098d9;
-$value-color:       #61468b;
-
-$title-color:       #61468b;
-$moreinfo-color:    rgba(255, 255, 255, 0.8);;
-
+$light-color:  rgb(147,143,195); //     rgb(184,183,218);
+$background-color:  $light-color;
+$title-color:       rgb(81,70,137);
+$value-color: rgb(212,213,214) ;
+$moreinfo-color: rgb(169,171,172); 
 // ----------------------------------------------------------------------------
 // Widget-weather styles
 // ----------------------------------------------------------------------------
@@ -14,7 +13,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.8);;
 
   background-color: $background-color;
   vertical-align: baseline !important;
-  color: $value-color;
+  color: $title-color;
 
   .headline-container {
     display: none;
@@ -28,7 +27,6 @@ $moreinfo-color:    rgba(255, 255, 255, 0.8);;
   }
 
   .description {
-    font-size: 1em;
     color: $value-color;
     padding-left: 1em;
     padding-right: 1em;
@@ -36,14 +34,15 @@ $moreinfo-color:    rgba(255, 255, 255, 0.8);;
   }
 
   .heading{
-    color: $value-color;
+    color: $title-color;
     font-size: 1em;
+    text-transform: none;
     text-align: left;
     padding-left: 1em;
   }
 
   hr {
-    color: $value-color;
+    color: $title-color;
     margin-left: 1em;
     margin-right: 1em;
     margin-bottom: 1em;
