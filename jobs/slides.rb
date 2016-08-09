@@ -19,7 +19,7 @@ class Slides
     get_images.each do |section|
       images << Nokogiri::HTML(section).css('img').map{ |i| i['src'] }
     end
-    images.flatten.map{ |x| "http://#{@@uri.host}:#{@@uri.port}#{x}" }
+    images.flatten.map{ |x| @@uri.dup.tap { |u| u.path = x }.to_s }
   end
 end
 
