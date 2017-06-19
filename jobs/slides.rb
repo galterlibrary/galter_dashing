@@ -5,21 +5,14 @@ require 'nokogiri'
 require 'time'
 
 class Slides
-  @@uri ||= URI.parse(ENV['DASHBOARD_SLIDES'])
-
-  def get_images
-    Net::HTTP.new(@@uri.host, @@uri.port)
-    response = Net::HTTP.get_response(@@uri)
-    content_json = JSON.parse(response.body)
-    content_json['sections'].map{ |content| content['content'] }
-  end
+  @@uri ||= URI.parse(ENV['DASHBOARD_SLIDES_JSON'])
 
   def image_list
-    images = []
-    get_images.each do |section|
-      images << Nokogiri::HTML(section).css('img').map{ |i| i['src'] }
-    end
-    images.flatten.map{ |x| @@uri.dup.tap { |u| u.path = x }.to_s }
+    Net::HTTP.new(@@uri.host, @@uri.port)
+    response = Net::HTTP.get_response(@@uri)
+    JSON.parse(response.body).map {|url|
+      "#{ENV['DASHBOARD_SLIDES_HOST']}/#{url}"
+    }
   end
 end
 
