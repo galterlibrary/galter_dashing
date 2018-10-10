@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'htmlentities'
 
 news_feeds = {
-  "fsm-main" => "http://news.feinberg.northwestern.edu/feed/"
+  "fsm-main" => "https://news.feinberg.northwestern.edu/feed/"
 }
 
 Decoder = HTMLEntities.new
@@ -15,7 +15,8 @@ class News
     # pick apart feed into domain and path
     uri = URI.parse(feed)
     @path = uri.path
-    @http = Net::HTTP.new(uri.host)
+    @http = Net::HTTP.new(uri.host, uri.port)
+    @http.use_ssl = true
   end
 
   def widget_id()
