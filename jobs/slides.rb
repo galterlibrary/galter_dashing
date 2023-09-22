@@ -9,10 +9,9 @@ class Slides
 
   def image_list
     Net::HTTP.new(@@uri.host, @@uri.port)
-    response = Net::HTTP.get_response(@@uri)
-    JSON.parse(response.body).map {|url|
-      "#{ENV['DASHBOARD_SLIDES_HOST']}/#{url}"
-    }
+    slides_response = Net::HTTP.get_response(@@uri)
+
+    JSON.parse(slides_response.body).map{ |slide_url| slide_url }
   end
 end
 
