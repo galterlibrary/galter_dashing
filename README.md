@@ -9,14 +9,14 @@ DEPLOYMENT
 5. Create apache config: `/etc/httpd/conf.d/dashing.conf`
 ```
 <VirtualHost *:80>
-    PassengerRuby /usr/local/rvm/wrappers/ruby-2.6.1/ruby
+    PassengerRuby /usr/local/rvm/wrappers/ruby-2.6.10/ruby
     # Always keep one and only one instance in the memory
     # so the event scheduler (rufus) is not killed or duplicated
     PassengerSpawnMethod direct
     PassengerMaxPreloaderIdleTime 0
     PassengerMaxInstancesPerApp 1
     PassengerMinInstances 1
-    ServerName vfsmghsldash2.fsm.northwestern.edu
+    ServerName ghsldash-staging.fsm.northwestern.edu
     DocumentRoot /var/www/apps/galter_dashing/public
     <Directory /var/www/apps/galter_dashing/public>
       AllowOverride all
